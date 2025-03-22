@@ -1,0 +1,32 @@
+[
+    {
+        "id": 172,
+        "label": "468",
+        "latitude": 46.782815,
+        "longitude": 23.7089416,
+        "timestamp": "2025-01-03T13:24:52.000Z",
+        "speed": 41,
+        "route_id": 78,
+        "trip_id": "78_0",
+        "vehicle_type": 3,
+        "bike_accessible": "BIKE_INACCESSIBLE",
+        "wheelchair_accessible": "WHEELCHAIR_INACCESSIBLE",
+        "direction_id": 0,
+        "route_short_name": "M41"
+    },
+    {
+        "id": 574,
+        "label": "574",
+        "latitude": 46.7872316,
+        "longitude": 23.7278666,
+        "timestamp": "2025-01-03T13:24:55.000Z",
+        "speed": 30,
+        "route_id": 78,
+        "trip_id": "78_1",
+        "vehicle_type": 3,
+        "bike_accessible": "BIKE_INACCESSIBLE",
+        "wheelchair_accessible": "WHEELCHAIR_ACCESSIBLE",
+        "direction_id": 1,
+        "route_short_name": "M41"
+    }
+]

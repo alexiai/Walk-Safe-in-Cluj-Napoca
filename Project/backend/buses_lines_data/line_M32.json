@@ -1,0 +1,17 @@
+[
+    {
+        "id": 14,
+        "label": "842",
+        "latitude": 46.7993216,
+        "longitude": 23.4994016,
+        "timestamp": "2025-01-03T13:24:53.000Z",
+        "speed": 57,
+        "route_id": 70,
+        "trip_id": "70_0",
+        "vehicle_type": 3,
+        "bike_accessible": "BIKE_INACCESSIBLE",
+        "wheelchair_accessible": "WHEELCHAIR_ACCESSIBLE",
+        "direction_id": 0,
+        "route_short_name": "M32"
+    }
+]

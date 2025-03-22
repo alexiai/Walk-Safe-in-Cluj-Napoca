@@ -1,0 +1,11 @@
+map-env
+try.py
+try2.py
+try3.py
+routes.txt
+trips.txt
+vehicles.txt
+junk/
+cache/
+gnn_stuff/
+.env.json

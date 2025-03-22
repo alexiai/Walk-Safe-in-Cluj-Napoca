@@ -1,0 +1,17 @@
+[
+    {
+        "id": 106,
+        "label": "549",
+        "latitude": 46.748845,
+        "longitude": 23.5936683,
+        "timestamp": "2025-01-03T13:24:50.000Z",
+        "speed": 40,
+        "route_id": 60,
+        "trip_id": "60_1",
+        "vehicle_type": 3,
+        "bike_accessible": "BIKE_INACCESSIBLE",
+        "wheelchair_accessible": "WHEELCHAIR_INACCESSIBLE",
+        "direction_id": 1,
+        "route_short_name": "M12"
+    }
+]

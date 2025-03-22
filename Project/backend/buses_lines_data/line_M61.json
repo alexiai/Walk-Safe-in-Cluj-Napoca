@@ -1,0 +1,17 @@
+[
+    {
+        "id": 606,
+        "label": "571",
+        "latitude": 46.6817933,
+        "longitude": 23.7337116,
+        "timestamp": "2025-01-03T13:24:23.000Z",
+        "speed": 0,
+        "route_id": 150,
+        "trip_id": "150_0",
+        "vehicle_type": 3,
+        "bike_accessible": "BIKE_INACCESSIBLE",
+        "wheelchair_accessible": "WHEELCHAIR_INACCESSIBLE",
+        "direction_id": 0,
+        "route_short_name": "M61"
+    }
+]

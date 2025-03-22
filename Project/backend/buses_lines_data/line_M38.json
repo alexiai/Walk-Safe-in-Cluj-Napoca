@@ -1,0 +1,17 @@
+[
+    {
+        "id": 10,
+        "label": "846",
+        "latitude": 46.89505,
+        "longitude": 23.5297183,
+        "timestamp": "2025-01-03T13:24:55.000Z",
+        "speed": 27,
+        "route_id": 75,
+        "trip_id": "75_1",
+        "vehicle_type": 3,
+        "bike_accessible": "BIKE_INACCESSIBLE",
+        "wheelchair_accessible": "WHEELCHAIR_ACCESSIBLE",
+        "direction_id": 1,
+        "route_short_name": "M38"
+    }
+]

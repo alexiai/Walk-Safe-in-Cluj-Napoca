@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="https://openlayers.org/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
+  <title>Using OpenLayers with Vite</title>
+</head>
+<body style="display: none;">
+<div id="map"></div>
+<!-- Selector pentru modurile de transport -->
+<div id="mode-selector">
+  <img id="car-icon" src="directions.jpg" alt="Car Mode" class="mode-icon active" />
+  <img id="bus-icon" src="bus_2.png" alt="Bus Mode" class="mode-icon" />
+</div>
+
+
+<!-- Controale comune pentru ambele moduri -->
+<div id="common-controls">
+  <h10>Green zone importance:</h10><br>
+  <div class="flex content-center h-9">
+    <input type="range" id="lightning" min="0.1" max="1" step="0.1" value="0.2">
+    &nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;
+    <div id="lightning-value-box">1</div>
+  </div>
+  <div class="toggle-group">
+    <input type="checkbox" id="lamps" name="lamps" value="false">
+    <label for="lamps">Display lamps</label>
+    <!-- <input type="checkbox" id="pois" name="pois" value="false"> -->
+    <div id="poi-filters">
+        <label><input type="checkbox" value="shop" class="poi-filter" /> Shop</label>
+        <label><input type="checkbox" value="tourism" class="poi-filter" /> Tourism</label>
+        <label><input type="checkbox" value="restaurant" class="poi-filter" /> Restaurant</label>
+      </div>
+  </div>
+  <div>
+    <label for="layerSwitcher">Select Layer:</label>
+    <select id="layerSwitcher">
+      <option value="osm">OSM Base Layer</option>
+      <option value="traffic">Traffic Layer</option>
+      <option value="buses">Buses</option>
+    </select>
+  </div>
+</div>
+
+<!-- Controale pentru modul Mașină -->
+<div id="car-controls">
+  <button id="calculateButton">Display shortest path</button>
+</div>
+
+<!-- Controale pentru modul Autobuz -->
+<div id="bus-controls" class="hidden">
+  <div id="search-container">
+    <label for="search">Search:</label>
+    <input type="text" id="search" name="search" list="suggestions" placeholder="Choose bus line..." />
+  </div>
+  <datalist id="suggestions"></datalist>
+
+  <div class="button-group">
+    <button class="toggle-button" id="button0" data-value="0">Tur</button>
+    <button class="toggle-button" id="button1" data-value="1">Retur</button>
+  </div>
+  <button class="get-buses">Get buses</button>
+</div>
+
+<!-- Input-uri pentru locațiile de plecare și destinație -->
+<div id="location-inputs">
+  <input type="text" id="start" placeholder="Start destination..." />
+  <input hidden type="text" id="start_coord" />
+  <input type="text" id="destination" placeholder="End destination..." />
+  <input hidden type="text" id="destination_coord" />
+</div>
+
+<!-- Container pentru pin-uri -->
+<div id="pin-container">
+  <div class="pin-label">
+    <span>Select start pin:</span>
+    <img id="start-pin" src="pin.png" alt="Start pin" class="ml-1.5"/>
+  </div>
+  <div class="pin-label">
+    <span>Select end pin:</span>
+    &nbsp;
+    <img id="destination-pin" src="pin.png" alt="Destination pin" />
+  </div>
+</div>
+<ul id="suggestions-start" class="suggestions"></ul>
+<ul id="suggestions-destination" class="suggestions"></ul>
+
+
+<script type="module" src="./main.jsx"></script>
+</body>
+</html>

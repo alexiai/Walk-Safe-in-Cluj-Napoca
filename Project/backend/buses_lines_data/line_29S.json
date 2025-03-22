@@ -1,0 +1,17 @@
+[
+    {
+        "id": 627,
+        "label": "413",
+        "latitude": 46.7609266,
+        "longitude": 23.5644966,
+        "timestamp": "2025-01-03T13:24:56.000Z",
+        "speed": 36,
+        "route_id": 116,
+        "trip_id": "116_1",
+        "vehicle_type": 3,
+        "bike_accessible": "BIKE_INACCESSIBLE",
+        "wheelchair_accessible": "WHEELCHAIR_INACCESSIBLE",
+        "direction_id": 1,
+        "route_short_name": "29S"
+    }
+]

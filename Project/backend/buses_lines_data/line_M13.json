@@ -1,0 +1,17 @@
+[
+    {
+        "id": 619,
+        "label": "987",
+        "latitude": 46.761335,
+        "longitude": 23.6123616,
+        "timestamp": "2025-01-03T13:24:51.000Z",
+        "speed": 38,
+        "route_id": 61,
+        "trip_id": "61_0",
+        "vehicle_type": 3,
+        "bike_accessible": "BIKE_INACCESSIBLE",
+        "wheelchair_accessible": "WHEELCHAIR_INACCESSIBLE",
+        "direction_id": 0,
+        "route_short_name": "M13"
+    }
+]

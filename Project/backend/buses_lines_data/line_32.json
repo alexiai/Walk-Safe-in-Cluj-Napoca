@@ -1,0 +1,62 @@
+[
+    {
+        "id": 414,
+        "label": "921",
+        "latitude": 46.76589,
+        "longitude": 23.6044366,
+        "timestamp": "2025-01-03T13:24:53.000Z",
+        "speed": 32,
+        "route_id": 25,
+        "trip_id": "25_0",
+        "vehicle_type": 3,
+        "bike_accessible": "BIKE_INACCESSIBLE",
+        "wheelchair_accessible": "WHEELCHAIR_ACCESSIBLE",
+        "direction_id": 0,
+        "route_short_name": "32"
+    },
+    {
+        "id": 463,
+        "label": "953",
+        "latitude": 46.7569366,
+        "longitude": 23.6186016,
+        "timestamp": "2025-01-03T11:31:56.000Z",
+        "speed": 0,
+        "route_id": 25,
+        "trip_id": "25_0",
+        "vehicle_type": 3,
+        "bike_accessible": "BIKE_INACCESSIBLE",
+        "wheelchair_accessible": "WHEELCHAIR_ACCESSIBLE",
+        "direction_id": 0,
+        "route_short_name": "32"
+    },
+    {
+        "id": 467,
+        "label": "946",
+        "latitude": 46.7568483,
+        "longitude": 23.6186333,
+        "timestamp": "2025-01-03T11:22:12.000Z",
+        "speed": 0,
+        "route_id": 25,
+        "trip_id": "25_0",
+        "vehicle_type": 3,
+        "bike_accessible": "BIKE_INACCESSIBLE",
+        "wheelchair_accessible": "WHEELCHAIR_ACCESSIBLE",
+        "direction_id": 0,
+        "route_short_name": "32"
+    },
+    {
+        "id": 457,
+        "label": "951",
+        "latitude": 46.7672916,
+        "longitude": 23.6017383,
+        "timestamp": "2025-01-03T13:24:55.000Z",
+        "speed": 0,
+        "route_id": 25,
+        "trip_id": "25_1",
+        "vehicle_type": 3,
+        "bike_accessible": "BIKE_INACCESSIBLE",
+        "wheelchair_accessible": "WHEELCHAIR_ACCESSIBLE",
+        "direction_id": 1,
+        "route_short_name": "32"
+    }
+]

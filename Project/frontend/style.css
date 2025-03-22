@@ -1,0 +1,537 @@
+@import "node_modules/ol/ol.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { display: block !important; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+#react-app-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+}
+
+#login-button {
+  padding: 10px 20px;
+  background-color: #1a3b11;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#login-button:hover {
+  background-color: #1a3b11;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 80%;
+  z-index: 20;
+}
+
+.modal button {
+  display: inline-block;
+  margin: 10px 5px 0 0;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #739d65;
+  color: white;
+  cursor: pointer;
+}
+
+.modal button:hover {
+  background-color: #739d65;
+}
+
+.modal input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 15;
+  pointer-events: auto;
+}
+
+.button {
+  display: inline-block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.upload-list {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.upload-list h3 {
+  margin: 0 0 10px 0;
+}
+
+.upload-item {
+  margin: 5px 0;
+  color: #333;
+}
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 90%;
+  z-index: 20;
+}
+
+.modal h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #333;
+}
+
+.modal textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: none;
+  font-size: 14px;
+}
+
+.modal input[type="file"] {
+  margin: 10px 0;
+}
+
+.modal button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal button:hover {
+  background-color: #0056b3;
+}
+
+
+.uploaded-files {
+  margin-top: 15px;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.uploaded-files h4 {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 5px;
+}
+
+.uploaded-files ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.uploaded-files li {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.uploaded-files li::before {
+  content: "📄";
+  margin-right: 5px;
+  z-index: 0;
+}
+
+#start, #destination {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 25px;
+  border: none;
+  background-color: #739d65; /* Verde deschis */
+  color: white; /* Scris alb */
+  box-shadow: none;
+}
+
+input::placeholder {
+  color: white; /* Change this to your desired color */
+}
+
+#start:focus, #destination:focus {
+  outline: none;
+}
+
+#start {
+  top: 10px;
+  left: 10px;
+}
+
+#destination {
+  top: 60px;
+  left: 10px;
+}
+
+.suggestions {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border: 2px solid #000000;
+  border-radius: 25px;
+  max-height: 300px;
+  overflow-y: auto;
+  position: absolute;
+  z-index: 1001;
+  background-color: rgb(26, 59, 17);
+  width: 310px;
+  display: none;
+}
+
+#suggestions-start, #suggestions-destination {
+  position: absolute;
+  z-index: 1001;
+  background-color: #1a3b11; /* Verde inchis */
+  color: white; /* Scris alb */
+  border: none;
+  border-radius: 8px;
+  padding: 5px;
+  width: 300px;
+}
+/* Ajustare poziție sugestii */
+#suggestions-start {
+  top: 110px;
+  left: 30px;
+}
+
+#suggestions-destination {
+  top: 110px;
+  left: 335px;
+}
+
+
+.suggestions li {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.suggestions li:hover {
+  background-color: #1a3b11; /* Verde mediu */
+}
+
+.suggestions li .title {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.suggestions li .details {
+  font-size: 12px;
+  color: #666;
+}
+
+#pin-container {
+  position: fixed; /* Schimbă în fixed pentru a nu depinde de părinte */
+  bottom: 18px;
+  right: 1px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#pin-container img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.pin-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.pin-label span {
+  font-size: 12px;
+  color: white;
+  background-color: #1a3b11; /* Verde închis */
+  padding: 2px 8px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+#textboxes {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#textboxes input {
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.toggle-button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #739d65; /* Verde deschis */
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 20px;
+}
+
+.toggle-button.active {
+  background-color: #1a3b11; /* Verde inchis */
+  color: white;
+}
+
+.toggle-button:hover {
+  background-color: #739d65;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 20px;
+  background-color: #6c757d;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: none;
+}
+
+button:hover {
+  background-color: #5a6268;
+  transform: translateY(-2px);
+  box-shadow: none;
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+
+#mode-selector {
+  display: flex;
+  gap: 20px; /* Distanța între iconițe */
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  z-index: 1000;
+}
+
+.mode-icon {
+  width: 35px;  /* Dimensiune inițială mică */
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.2s, filter 0.2s;
+}
+
+.mode-icon:hover {
+  transform: scale(1.2); /* Mărește iconița la hover */
+}
+
+.mode-icon.active {
+  filter: drop-shadow(0px 0px 5px rgba(0, 123, 255, 0.8)); /* Evidențiază iconița selectată */
+}
+
+
+.mode-button.active {
+  background-color: #007bff;
+  color: white;
+}
+#bus-controls {
+  background-color: #739d65; /* Verde deschis */
+  position: absolute; /* Asigură poziționarea peste hartă */
+  top: 73%; /* Ajustează în funcție de design */
+  left: 20px;
+  z-index: 10; /* Mai mare decât z-index-ul hărții */
+  padding: 10px;
+  border-radius: 8px;
+}
+#car-controls {
+  position: fixed; /* Schimbăm în fixed pentru poziționare relativă la fereastră */
+  top: 90%;
+  left: 20px;
+  z-index: 10;
+  background-color: #739d65; /* Verde deschis */
+  border-radius: 25px;
+  padding: 15px;
+}
+#search-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#bus-controls input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #1a3b11;
+  color: #ffffff;
+  width: 100%;
+  outline: none;
+}
+
+#common-controls {
+  position: absolute;
+  top: 71%;
+  left: 20px;
+  z-index: 10;
+  background-color: #739d65; /* Verde deschis */
+  color: white;
+  padding: 20px;
+  border-radius: 25px;
+}
+
+#common-controls label, #common-controls select {
+  color: white;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#location-inputs {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  z-index: 10;
+  background-color: transparent;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+/* Stilizare pentru butonul Get Buses */
+.get-buses {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #1a3b11; /* Verde inchis */
+  color: white;
+  cursor: pointer;
+}
+
+/* Stilizare pentru butonul Display shortest path */
+#calculateButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #1a3b11; /* Verde inchis */
+  color: white;
+  cursor: pointer;
+}
+#layerSwitcher {
+  border-radius: 10px;
+  border: none;
+  padding: 5px 10px;
+  background-color: #1a3b11; /* Verde inchis */
+  color: white;
+}
+#layerSwitcher option {
+  background-color: #1a3b11; /* Verde închis */
+  color: white;
+}
+
+#layerSwitcher option[value="buses"] {
+  display: none; /* Eliminare opțiunea Bus */
+}
+#layerSwitcher option:checked {
+  background-color: #004d00; /* Verde mai închis */
+  color: white;
+}

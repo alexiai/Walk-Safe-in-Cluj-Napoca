@@ -1,0 +1,17 @@
+[
+    {
+        "id": 453,
+        "label": "955",
+        "latitude": 46.747005,
+        "longitude": 23.5023833,
+        "timestamp": "2025-01-03T13:24:56.000Z",
+        "speed": 41,
+        "route_id": 64,
+        "trip_id": "64_0",
+        "vehicle_type": 3,
+        "bike_accessible": "BIKE_INACCESSIBLE",
+        "wheelchair_accessible": "WHEELCHAIR_ACCESSIBLE",
+        "direction_id": 0,
+        "route_short_name": "M22"
+    }
+]

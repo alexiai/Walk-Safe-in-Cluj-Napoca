@@ -1,0 +1,17 @@
+[
+    {
+        "id": 582,
+        "label": "578",
+        "latitude": 46.7496266,
+        "longitude": 23.5137316,
+        "timestamp": "2025-01-03T13:24:53.000Z",
+        "speed": 48,
+        "route_id": 121,
+        "trip_id": "121_0",
+        "vehicle_type": 3,
+        "bike_accessible": "BIKE_INACCESSIBLE",
+        "wheelchair_accessible": "WHEELCHAIR_ACCESSIBLE",
+        "direction_id": 0,
+        "route_short_name": "M51"
+    }
+]
